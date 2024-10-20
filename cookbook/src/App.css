@@ -1,0 +1,104 @@
+/* Global Styles */
+/* Set background color to black */
+body {
+  background-color: black;
+  /* Set font color to white */
+  color: white;
+  /* Default font */
+  font-family: Arial, sans-serif;
+}
+
+/* Container Styles */
+/* Flexbox container for meal items */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* Adjust gap between items */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Meal Details Page Styles */
+/* Individual meal item styles */
+.meal-details {
+  /* Adjust width for four items per row */
+  flex: 0 0 calc(25% - 20px);
+  /* Black background */
+  background-color: black;
+  /* Rounded corners */
+  border-radius: 5px;
+  /* Ensure consistent image size */
+  overflow: hidden;
+  /* Pointer cursor on hover */
+  cursor: pointer;
+  /* Smooth scaling transition on hover */
+  transition: transform 0.3s ease;
+  /* Limit max width of each item */
+  max-width: 200px;
+}
+
+/* Scale up on hover */
+.meal-details:hover {
+  transform: scale(1.05);
+}
+
+/* Meal thumbnail styles */
+.meal-details img {
+  width: 100%;
+  height: auto;
+  /* Rounded corners for top */
+  border-radius: 5px 5px 0 0;
+}
+
+/* Meal information styles */
+.meal-info {
+  padding: 10px;
+}
+
+/* Search Page Styles */
+/* Styles for the search container */
+.search-container {
+  text-align: center;
+  /* Margin space at the top */
+  margin-top: 20px;
+}
+
+/* Styles for the search form */
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles for the search input */
+.search-input {
+  /* Adjust width as needed */
+  width: 300px;
+  padding: 10px;
+  /* Gray border */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  /* Add margin between input and button */
+  margin-right: 10px;
+}
+
+/* Styles for the search button */
+.search-button {
+  /* Adjust padding as needed */
+  padding: 10px 20px;
+  /* Purple background color */
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  /* Pointer cursor */
+  cursor: pointer;
+  /* Add transition for hover effect */
+  transition: background-color 0.3s;
+}
+
+/* Darker purple color on hover */
+.search-button:hover {
+  background-color: #542979;
+}

@@ -1,0 +1,36 @@
+.profile-page {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.my-health {
+    margin-top: 20px;
+}
+
+.trackers {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.tracker {
+    text-align: center;
+}
+
+.prescriptions {
+    margin-top: 20px;
+}
+
+.prescription {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+}

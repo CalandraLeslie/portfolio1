@@ -20,9 +20,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     .navbar {
-      position: absolute;
-      top: 0;
-      right: 0;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+    .navbar ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+    .navbar ul li {
+      margin: 0 10px;
+    }
+    .navbar ul li a {
+      text-decoration: none;
+      color: #000;
+    }
+    .mobile-nav-toggle {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        display: none;
+      }
+      .navbar ul li {
+        margin: 10px 0;
+      }
+      .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+      }
+      .navbar ul.active {
+        display: flex;
+      }
     }
     .portfolio-details .portfolio-details-slider img {
       max-width: 100%;
@@ -61,7 +93,7 @@
         <li><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <i class="bi bi-list mobile-nav-toggle" onclick="toggleMenu()"></i>
     </nav>
   </div>
 </header>
@@ -124,6 +156,12 @@
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+    function toggleMenu() {
+        const navbar = document.getElementById('navbar').querySelector('ul');
+        navbar.classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>

@@ -41,6 +41,21 @@
       .portfolio-details .row {
         flex-direction: column;
       }
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+      }
+      .navbar ul.active {
+        display: flex;
+      }
+      .navbar ul li {
+        margin: 10px 0;
+      }
+      .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+      }
     }
     body {
       font-family: Arial, sans-serif;
@@ -89,7 +104,7 @@
         <li><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle" onclick="toggleMenu()">☰</i>
+      <i class="bi bi-list mobile-nav-toggle" onclick="toggleMenu()"></i>
     </nav>
   </div>
 </header>

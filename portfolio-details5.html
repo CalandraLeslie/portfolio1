@@ -22,7 +22,7 @@
   <meta property="twitter:description" content="Explore Calandra Leslie's expertise in Agile methodologies and Scrum. Discover how she led software development projects using iterative approaches and collaborative techniques.">
   <meta property="twitter:image" content="https://calandraonline.com/assets/img/portfolio/agile.png">
 
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -37,25 +37,9 @@
       top: 0;
       right: 0;
     }
-    @media (max-width: 768px) {
-      .portfolio-details .row {
-        flex-direction: column;
-      }
-      .navbar ul {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-      }
-      .navbar ul.active {
-        display: flex;
-      }
-      .navbar ul li {
-        margin: 10px 0;
-      }
-      .mobile-nav-toggle {
-        display: block;
-        cursor: pointer;
-      }
+    .portfolio-details .portfolio-details-slider img {
+      max-width: 100%;
+      height: auto;
     }
     body {
       font-family: Arial, sans-serif;
@@ -71,11 +55,48 @@
     .link {
       word-wrap: break-word;
     }
-    .portfolio-details-slider img {
-      max-width: 100%;
-      height: auto;
+    @media (max-width: 768px) {
+      .portfolio-details .row {
+        flex-direction: column;
+      }
+      .navbar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: white;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+      .navbar ul.active {
+        display: flex;
+      }
+      .navbar ul li {
+        margin: 10px 0;
+      }
+      .mobile-nav-toggle {
+        display: block;
+        cursor: pointer;
+      }
     }
   </style>
+  <!-- Structured Data for Portfolio Project -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Agile Project Leadership & Testing",
+    "description": "Explore Calandra Leslie's expertise in Agile methodologies and Scrum. Discover how she led software development projects using iterative approaches and collaborative techniques.",
+    "author": {
+      "@type": "Person",
+      "name": "Calandra Leslie"
+    },
+    "image": "https://calandraonline.com/assets/img/portfolio/agile.png",
+    "url": "https://calandraonline.com/portfolio-details5.html"
+  }
+  </script>
 </head>
 <body>
 
@@ -89,7 +110,7 @@
         <li><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
+      <i class="bi bi-list mobile-nav-toggle" onclick="toggleMenu()">☰</i>
     </nav>
   </div>
 </header>
@@ -130,6 +151,12 @@
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
 <script src="assets/js/main.js"></script>
+<script>
+    function toggleMenu() {
+        const navbar = document.getElementById('navbar').querySelector('ul');
+        navbar.classList.toggle('active');
+    }
+</script>
 
 </body>
 </html>

@@ -30,10 +30,10 @@
     "react-scroll": "^1.9.3",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "http://calandraonline.com/Lawyer",
+  "homepage": "https://calandraonline.com/Lawyer",
   "repository": {
     "type": "git",
-    "url": "http://github.com/calandraleslie/portfolio1.git"
+    "url": "http://github.com/username/john-smith-law.git"
   },
   "eslintConfig": {
     "extends": [

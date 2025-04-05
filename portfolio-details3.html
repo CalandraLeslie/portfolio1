@@ -18,9 +18,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     .navbar {
-      position: absolute;
-      top: 0;
-      right: 0;
+      position: relative; /* Change from absolute to relative */
+      /* Remove top and right properties */
     }
     .portfolio-details-slider img {
       max-width: 100%;
@@ -76,7 +75,7 @@
 <body>
 
 <header id="header" class="fixed-top d-flex align-items-center">
-  <div class="container d-flex justify-content-end align-items-center">
+  <div class="container d-flex justify-content-center align-items-center">
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link" href="index.html">Home</a></li>
@@ -86,7 +85,6 @@
         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
-      
     </nav>
   </div>
 </header>

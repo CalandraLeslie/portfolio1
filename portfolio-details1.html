@@ -33,14 +33,12 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <style>
     .navbar {
-      position: static; /* Change from relative to static to use header positioning */
+      position: absolute;
+      top: 0;
+      right: 0;
     }
+    /* Remove the centering styles */
     header#header {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    /* Keep the centering of navbar items */
-    .container.d-flex.justify-content-center {
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -96,7 +94,7 @@
 <body>
 
 <header id="header" class="fixed-top d-flex align-items-center">
-  <div class="container d-flex justify-content-center align-items-center">
+  <div class="container d-flex justify-content-end align-items-center">
     <nav id="navbar" class="navbar">
       <ul>
         <li><a class="nav-link" href="index.html">Home</a></li>
@@ -156,6 +154,11 @@
             <li>Customizable task categories and priorities</li>
           </ul>
           
+          <h4>Technical Highlights</h4>
+          <p>
+            This project showcases my ability to implement JavaScript for task management, 
+            demonstrating skills in DOM manipulation, event handling, and local storage for persistence.
+          </p>
         </div>
       </div>
     </div>

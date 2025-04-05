@@ -27,14 +27,11 @@
   <!-- Navbar styling -->
   <style>
     .navbar {
-      position: static; /* Change from relative to static to use header positioning */
+      position: absolute;
+      top: 0;
+      right: 0;
     }
     header#header {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    /* Keep the centering of navbar items */
-    .container.d-flex.justify-content-center {
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -106,7 +103,7 @@
 
   <!-- Navbar Section -->
   <header id="header" class="fixed-top d-flex align-items-center">
-    <div class="container d-flex justify-content-center align-items-center">
+    <div class="container d-flex justify-content-end align-items-center">
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link" href="index.html">Home</a></li>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task Master Pro: Dynamic To-Do List Application | Calandra Leslie Portfolio</title>
+  <title>BlogSphere API: Web API Integration Project | Calandra Leslie Portfolio</title>
   <meta name="description" content="Explore a blog API project completed as a web communication project, showcasing fetching and displaying blog posts using JavaScript.">
   <meta name="keywords" content="API Client, blog API, web communication, project, JavaScript, web development, API in JavaScript, JensenYh">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -11,7 +11,6 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
@@ -23,10 +22,10 @@
       right: 0;
     }
     .portfolio-details-slider img {
-      max-width: 100%;
+      width: 100%;
       height: auto;
+      object-fit: contain;
     }
-    /* Add responsive styles here */
     body {
       font-family: Arial, sans-serif;
       margin: 0;
@@ -40,6 +39,19 @@
     }
     .link {
       word-wrap: break-word;
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media (max-width: 768px) {
+      .portfolio-details .row {
+        flex-direction: column;
+      }
+    }
+    .nav-link.active {
+      color: #18d26e !important;
+      font-weight: bold;
     }
   </style>
   <meta name="description" content="Explore Calandra Leslie's 'BlogSphere API' project - a web application showcasing API integration, asynchronous JavaScript, and dynamic content rendering.">
@@ -59,8 +71,6 @@
   <meta property="twitter:title" content="BlogSphere API: Web API Integration Project | Calandra Leslie Portfolio">
   <meta property="twitter:description" content="Explore Calandra Leslie's 'BlogSphere API' project - a web application showcasing API integration, asynchronous JavaScript, and dynamic content rendering.">
   <meta property="twitter:image" content="https://www.calandraonline.com/assets/img/portfolio/Blog1.jpg">
-
-  <link href="assets/css/style.css" rel="stylesheet">
   
   <!-- Structured Data for Portfolio Project -->
   <script type="application/ld+json">
@@ -90,7 +100,7 @@
         <li><a class="nav-link" href="index.html">Home</a></li>
         <li><a class="nav-link" href="index.html#about">About</a></li>
         <li><a class="nav-link" href="index.html#resume">Resume</a></li>
-        <li><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+        <li><a class="nav-link active" href="index.html#portfolio">Portfolio</a></li>
         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
@@ -102,7 +112,7 @@
   <div id="portfolio-details" class="portfolio-details">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 col-lg-8">
+        <div class="col-lg-8">
           <h2 class="portfolio-title">Blog API project</h2>
           <div class="portfolio-details-slider swiper">
             <div class="swiper-wrapper align-items-center">
@@ -120,27 +130,38 @@
           </div>
         </div>
 
-        <div class="col-md-12 col-lg-4 portfolio-info">
+        <div class="col-lg-4 portfolio-info">
           <h3>Project information</h3>
-        <ul>
-          <li><strong>Category:</strong> Web API</li>
-          <li><strong>Course:</strong> API in JavaScript</li>
-          <li><strong>Project Date:</strong> Fall 2023</li>
-          <li><strong>Project URL</strong>: <a href="https://github.com/CalandraLeslie/Blog-API-Klient"</a></li>
-          <li>If you have trouble accessing the project, please contact me for a demo or screenshots</li>
-        </ul>
-
-        <h4>Project Overview</h4>
-        <p>
-          This Blog API project, completed as part of my web communication course at JensenYh, demonstrates the integration of external APIs into a web application. The primary function of this application is to fetch and display blog posts from a shared API, showcasing posts from both myself and my classmates.
-        </p>
-
-        <p>
-          The project highlights my ability to work with APIs, handle asynchronous JavaScript, and create a user-friendly interface for displaying dynamic content. It serves as a practical example of how APIs can be utilized to enhance web applications and provide real-time data to users.
-
+          <ul>
+            <li><strong>Category:</strong> Web API</li>
+            <li><strong>Course:</strong> API in JavaScript</li>
+            <li><strong>Project Date:</strong> Fall 2023</li>
+            <li><strong>Project URL:</strong> <a href="https://github.com/CalandraLeslie/Blog-API-Klient" target="_blank" rel="noopener noreferrer" class="link">https://github.com/CalandraLeslie/Blog-API-Klient</a></li>
+            <li>If you have trouble accessing the project, please contact me for a demo or screenshots</li>
+          </ul>
+          
+          <br>
+          <h4>Project Overview</h4>
+          <p>
+            This Blog API project, completed as part of my web communication course at JensenYh, demonstrates the integration of external APIs into a web application. The primary function of this application is to fetch and display blog posts from a shared API, showcasing posts from both myself and my classmates.
+          </p>
+          
+          <h4>Key Features</h4>
+          <ul>
+            <li>Real-time blog post fetching from external API</li>
+            <li>User-friendly interface for browsing posts</li>
+            <li>Pagination and filtering options</li>
+            <li>Responsive design for various devices</li>
+          </ul>
+          
+          <h4>Technical Highlights</h4>
+          <p>
+            The project highlights my ability to work with APIs, handle asynchronous JavaScript, and create a user-friendly interface for displaying dynamic content. It serves as a practical example of how APIs can be utilized to enhance web applications and provide real-time data to users.
+          </p>
+        </div>
       </div>
     </div>
-  </div><!-- End Portfolio Details -->
+  </div>
 </main>
 
 <div class="credits"></div>
@@ -152,6 +173,18 @@
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
 <script src="assets/js/main.js"></script>
+
+<script>
+// Set active navigation link
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === 'index.html#portfolio') {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
 
 </body>
 </html>

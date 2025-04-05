@@ -13,25 +13,34 @@
   <meta property="og:url" content="https://www.calandraonline.com/portfolio-details1.html">
   <meta property="og:title" content="Task Master Pro: Dynamic To-Do List Application | Calandra Leslie Portfolio">
   <meta property="og:description" content="Explore Calandra Leslie's 'Task Master Pro' project - a dynamic to-do list application showcasing JavaScript, HTML5, and CSS3 skills in web application development.">
-  <meta property="og:image" content="https://www.calandraonline.com/assets/img/portfolio/todolist%203.jpg">
+  <meta property="og:image" content="https://www.calandraonline.com/assets/img/portfolio/todolist1.jpg">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://www.calandraonline.com/portfolio-details1.html">
   <meta property="twitter:title" content="Task Master Pro: Dynamic To-Do List Application | Calandra Leslie Portfolio">
   <meta property="twitter:description" content="Explore Calandra Leslie's 'Task Master Pro' project - a dynamic to-do list application showcasing JavaScript, HTML5, and CSS3 skills in web application development.">
-  <meta property="twitter:image" content="https://www.calandraonline.com/assets/img/portfolio/todolist%203.jpg">
+  <meta property="twitter:image" content="https://www.calandraonline.com/assets/img/portfolio/todolist1.jpg">
 
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
   <style>
     .navbar {
       position: absolute;
       top: 0;
       right: 0;
     }
-    .portfolio-details .portfolio-details-slider img {
-      max-width: 100%;
+    .portfolio-details-slider img {
+      width: 100%;
       height: auto;
+      object-fit: contain;
     }
     body {
       font-family: Arial, sans-serif;
@@ -46,6 +55,19 @@
     }
     .link {
       word-wrap: break-word;
+      display: inline-block;
+      max-width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    @media (max-width: 768px) {
+      .portfolio-details .row {
+        flex-direction: column;
+      }
+    }
+    .nav-link.active {
+      color: #18d26e !important;
+      font-weight: bold;
     }
   </style>
   <!-- Structured Data for Portfolio Project -->
@@ -59,7 +81,7 @@
       "@type": "Person",
       "name": "Calandra Leslie"
     },
-    "image": "https://www.calandraonline.com/assets/img/portfolio/todolist%203.jpg",
+    "image": "https://www.calandraonline.com/assets/img/portfolio/todolist1.jpg",
     "url": "https://www.calandraonline.com/portfolio-details1.html"
   }
   </script>
@@ -73,58 +95,69 @@
         <li><a class="nav-link" href="index.html">Home</a></li>
         <li><a class="nav-link" href="index.html#about">About</a></li>
         <li><a class="nav-link" href="index.html#resume">Resume</a></li>
-        <li><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+        <li><a class="nav-link active" href="index.html#portfolio">Portfolio</a></li>
         <li><a class="nav-link" href="index.html#contact">Contact</a></li>
       </ul>
-      <i class="bi bi-list mobile-nav-toggle" onclick="toggleMenu()">☰</i>
+      <i class="bi bi-list mobile-nav-toggle"></i>
     </nav>
   </div>
 </header>
 
 <main id="main">
+  <div id="portfolio-details" class="portfolio-details">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="portfolio-details-slider">
-                    <img src="https://github.com/CalandraLeslie/To-do-list" alt="Task Master Pro Project Image">
-                    <div class="swiper-pagination"></div>
-                </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <h2 class="portfolio-title">Task Master Pro Application</h2>
+          <div class="portfolio-details-slider swiper">
+            <div class="swiper-wrapper align-items-center">
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/todolist1.jpg" alt="Task Master Pro Project Image">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/todolist2.jpg" alt="Task Master Pro Project Details">
+              </div>
+              <div class="swiper-slide">
+                <img src="assets/img/portfolio/todolist 3.jpg" alt="Task Master Pro Interface">
+              </div>
             </div>
-            <div class="col-lg-4 portfolio-info">
-                <h3>Project information</h3>
-                <ul>
-                    <li><strong>Category</strong>: Web Application</li>
-                    <li><strong>Technology</strong>: JavaScript, HTML5, CSS3</li>
-                    <li><strong>Project date</strong>: Fall 2023</li>
-                    <li><strong>Project Access</strong>:
-                        <ul>
-                            <li>Visit <a href="https://calandraonline.com/to-do-list/" target="_blank" rel="noopener noreferrer" class="link">https://calandraonline.com/to-do-list/</a></li>
-                            <li>If you have trouble accessing the project, please contact me for a demo or screenshots</li>
-                        </ul>
-                    </li>
-                </ul>
-                <p>
-                    <strong>Project Description:</strong> Task Master Pro is a dynamic to-do list application that showcases my skills in JavaScript, HTML5, and CSS3. The project demonstrates my ability to create interactive and user-friendly web applications.
-                </p>
-                <p>
-                    <strong>Key Features:</strong>
-                    <ul>
-                        <li>Responsive design for optimal viewing on various devices</li>
-                        <li>Interactive task management with drag-and-drop functionality</li>
-                        <li>Real-time updates and notifications</li>
-                        <li>Customizable task categories and priorities</li>
-                    </ul>
-                </p>
-                <p>
-                    <strong>Technologies Used:</strong>
-                    <ul>
-                        <li>JavaScript for dynamic functionality</li>
-                        <li>HTML5 for structure and content</li>
-                        <li>CSS3 for styling and layout</li>
-                    </ul>
-            </div>
+            <div class="swiper-pagination"></div>
+          </div>
         </div>
+
+        <div class="col-lg-4 portfolio-info">
+          <h3>Project information</h3>
+          <ul>
+            <li><strong>Category:</strong> Web Application</li>
+            <li><strong>Technology:</strong> JavaScript, HTML5, CSS3</li>
+            <li><strong>Project Date:</strong> Fall 2023</li>
+            <li><strong>Project URL:</strong> <a href="https://github.com/CalandraLeslie/To-do-list" target="_blank" rel="noopener noreferrer" class="link">https://github.com/CalandraLeslie/To-do-list</a></li>
+            <li>If you have trouble accessing the project, please contact me for a demo or screenshots</li>
+          </ul>
+          
+          <br>
+          <h4>Project Overview</h4>
+          <p>
+            Task Master Pro is a dynamic to-do list application that showcases my skills in JavaScript, HTML5, and CSS3. The project demonstrates my ability to create interactive and user-friendly web applications.
+          </p>
+          
+          <h4>Key Features</h4>
+          <ul>
+            <li>Responsive design for optimal viewing on various devices</li>
+            <li>Interactive task management with drag-and-drop functionality</li>
+            <li>Real-time updates and notifications</li>
+            <li>Customizable task categories and priorities</li>
+          </ul>
+          
+          <h4>Technical Highlights</h4>
+          <p>
+            This project showcases my ability to implement JavaScript for task management, 
+            demonstrating skills in DOM manipulation, event handling, and local storage for persistence.
+          </p>
+        </div>
+      </div>
     </div>
+  </div>
 </main>
 
 <div class="credits"></div>
@@ -136,11 +169,17 @@
 <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
 <script src="assets/vendor/php-email-form/validate.js"></script>
 <script src="assets/js/main.js"></script>
+
 <script>
-    function toggleMenu() {
-        const navbar = document.getElementById('navbar').querySelector('ul');
-        navbar.classList.toggle('active');
+// Set active navigation link
+document.addEventListener('DOMContentLoaded', function() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === 'index.html#portfolio') {
+      link.classList.add('active');
     }
+  });
+});
 </script>
 
 </body>

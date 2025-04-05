@@ -18,7 +18,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     .navbar {
-      position: relative;
+      position: static; /* Change from relative to static to use header positioning */
+    }
+    header#header {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    /* Keep the centering of navbar items */
+    .container.d-flex.justify-content-center {
+      padding-top: 0;
+      padding-bottom: 0;
     }
     .portfolio-details .portfolio-details-slider img {
       max-width: 100%;

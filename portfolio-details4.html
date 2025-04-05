@@ -27,8 +27,16 @@
   <!-- Navbar styling -->
   <style>
     .navbar {
-      position: relative; /* Change from absolute to relative */
-      /* Remove top and right properties */
+      position: static; /* Change from relative to static to use header positioning */
+    }
+    header#header {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    /* Keep the centering of navbar items */
+    .container.d-flex.justify-content-center {
+      padding-top: 0;
+      padding-bottom: 0;
     }
     .portfolio-details-slider img {
       max-width: 100%;

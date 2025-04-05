@@ -38,8 +38,10 @@
     }
     .link {
       word-wrap: break-word;
-      max-width: 100%;
       display: inline-block;
+      max-width: 250px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     @media (max-width: 768px) {
       .portfolio-details .row {
@@ -100,7 +102,7 @@
   <div id="portfolio-details" class="portfolio-details">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 col-lg-8">
+        <div class="col-lg-8">
           <h2 class="portfolio-title">Advanced JavaScript and React</h2>
           <div class="portfolio-details-slider swiper">
             <div class="swiper-wrapper align-items-center">
@@ -112,7 +114,7 @@
           </div>
         </div>
 
-        <div class="col-md-12 col-lg-4 portfolio-info">
+        <div class="col-lg-4 portfolio-info">
           <h3>JavaScript webpage</h3>
           <ul>
             <li><strong>Category:</strong> Advanced JavaScript/React</li>

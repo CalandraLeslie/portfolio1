@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/' // Change from '/Greyhold/' to '/'
+    publicPath: '/Greyhold/' // Change from '/' to '/Greyhold/'
   },
   module: {
     rules: [

@@ -3,6 +3,6 @@
   publish = "dist"
 
 [[redirects]]
-  from = "/*"
-  to = "/index.html"
+  from = "/Greyhold/*"
+  to = "/Greyhold/index.html"
   status = 200

@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './app';
+import './styles/styles.css';  // Adjust if your CSS path is different
 
-// Bare minimum React code with error catching
 console.log('DEBUG: React script starting execution');
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -12,20 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (rootElement) {
     try {
-      // Try React rendering with basic content
       ReactDOM.render(
-        <h1>React is now working!</h1>,
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>,
         rootElement
       );
       console.log('DEBUG: React rendering successful');
     } catch (error) {
       console.error('DEBUG: React render error:', error);
-      // Add fallback rendering
       rootElement.innerHTML = '<h1 style="color:red">React failed, but we caught the error</h1>';
     }
   } else {
     console.error('DEBUG: Root element not found!');
   }
 });
-
-entry: './src/main.js';

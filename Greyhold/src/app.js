@@ -9,7 +9,7 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <Router basename="/Greyhold">
+    <Router basename="/">
       <div className="app">
         <Navbar />
         <Switch>

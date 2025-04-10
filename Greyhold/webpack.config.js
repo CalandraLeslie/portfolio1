@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/Greyhold/' // Change to match your subdirectory
+    publicPath: '/' // Change from '/Greyhold/' to '/'
   },
   module: {
     rules: [

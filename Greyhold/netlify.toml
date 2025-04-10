@@ -6,3 +6,9 @@
   from = "/Greyhold/*"
   to = "/Greyhold/index.html"
   status = 200
+
+[[redirects]]
+  from = "/*"
+  to = "/Greyhold/"
+  status = 301
+  force = true

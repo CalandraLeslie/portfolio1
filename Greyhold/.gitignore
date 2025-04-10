@@ -22,3 +22,7 @@ dist/
 # Misc
 .DS_Store
 Thumbs.db
+
+# Netlify files
+public/_redirects
+netlify.tom
